@@ -1,0 +1,11 @@
+streamlit>=1.36,<2
+chromadb>=0.5,<2
+pypdf>=4.2,<7
+sentence-transformers>=3.0,<6
+python-dotenv>=1.0,<2
+requests>=2.31,<3
+numpy>=1.26,<3
+pytest>=8.0,<9
+reportlab>=4.0,<5
+
+PyMuPDF>=1.20,<2

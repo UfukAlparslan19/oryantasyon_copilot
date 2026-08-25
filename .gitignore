@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/
+.env
+chroma_db/*
+!chroma_db/.gitkeep
+.DS_Store
+data/analytics.db

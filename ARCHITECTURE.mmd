@@ -1,0 +1,13 @@
+flowchart TD
+    A[PDF dokümanları<br/>data/pdfs] --> B[PyPDF<br/>metin çıkarma]
+    B --> C[Chunker<br/>sayfa + kaynak metadata]
+    C --> D[Local Embeddings<br/>SentenceTransformers veya hashing fallback]
+    D --> E[(ChromaDB<br/>yerel kalıcı vektör indeks)]
+    F[Stajyer sorusu] --> G[Top-k retrieval]
+    E --> G
+    G --> H{Ollama erişilebilir mi?}
+    H -->|Evet| I[Phi-3 mini<br/>yerel LLM]
+    H -->|Hayır| J[Extractive fallback<br/>kaynaklı cevap]
+    I --> K[Streamlit sohbet arayüzü]
+    J --> K
+    K --> L[Kaynak dosya + sayfa gösterimi]
